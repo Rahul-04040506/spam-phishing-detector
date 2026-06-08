@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How it Works - Truth Lens</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2>📰 Truth Lens</h2>
+            <div>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/how">How it works</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="how-section">
+        <h1 style="color: orange;">How The System Works</h1>
+
+        <div class="how-container">
+
+            <div class="how-step">
+                <h3>1. User Input</h3>
+                <p>
+                    The process begins when a user enters a message into the system.
+                    This message can be an SMS, email, or any text containing potential spam or phishing content.
+                    The system is designed to analyze real-world communication data.
+                </p>
+            </div>
+
+            <div class="how-step">
+                <h3>2. Text Preprocessing</h3>
+                <p>
+                    The input message is cleaned and prepared for analysis.
+                    This includes converting text to lowercase, removing unnecessary characters,
+                    and standardizing the format so that the model can process meaningful patterns effectively.
+                </p>
+                </p>
+            </div>
+
+            <div class="how-step">
+                <h3>3. Feature Extraction (TF-IDF)</h3>
+                <p>
+                    The processed text is converted into numerical form using TF-IDF (Term Frequency–Inverse Document
+                    Frequency).
+                    This technique highlights important words and phrases such as “account”, “verify”, or “offer”,
+                    enabling the system to understand the significance of terms in the message.
+                </p>
+            </div>
+
+            <div class="how-step">
+                <h3>4. Logistic Regression Model</h3>
+                <p>
+                    A Logistic Regression model is used to classify the message as Spam or Not Spam.
+                    It learns patterns from labeled data and makes predictions based on the probability of a message
+                    being spam.
+                    This model is efficient and suitable for real-time applications.
+                </p>
+            </div>
+
+            <div class="how-step">
+                <h3>5. Phishing Detection (Rule-Based)</h3>
+                <p>
+                    In addition to machine learning, the system uses rule-based logic to detect phishing attempts.
+                    It checks for suspicious patterns such as the presence of URLs, keywords like “verify”, “bank”, or
+                    “urgent”,
+                    and unusual message structures.
+                    This helps identify subtle threats that the model might miss.
+                </p>
+            </div>
+
+            <div class="how-step">
+                <h3>6. Confidence Calculation</h3>
+                <p>
+                    The system calculates a confidence score for each prediction based on probability values.
+                    This score indicates how certain the model is about its classification,
+                    helping users understand the reliability of the result.
+                </p>
+
+            </div>
+
+            <div class="how-step">
+                <h3>7. Result Presentation</h3>
+                <p>
+                    The final result is displayed to the user, showing whether the message is Spam or Not Spam,
+                    along with the confidence percentage and phishing status.
+                    Suspicious keywords may also be highlighted for better transparency.
+                </p>
+            </div>
+
+            <div class="how-step">
+                <h3>8. System Limitations</h3>
+                <p>
+                    The system is based on learned patterns and predefined rules, so it may not detect highly advanced
+                    or new phishing techniques.
+                    Some messages with subtle context may be misclassified.
+                    Therefore, results should be considered as supportive insights rather than absolute conclusions.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
